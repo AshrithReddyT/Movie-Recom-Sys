@@ -46,7 +46,7 @@
     =>
     (printout t crlf)
     (printout t "-----------------------------------------------------------------------------" crlf)
-    (printout t "------------------------ WELCOME TO THE MOVIE EXPERT ------------------------" crlf)
+    (printout t "----------------WELCOME TO THE MOVIE RECOMMENDATION SYSTEM-------------------" crlf)
     (printout t "-----------------------------------------------------------------------------" crlf)
     (printout t crlf)    
     (send [user] put-companion
@@ -58,7 +58,7 @@
 ;----------------------------------------------------------------------------
 
 ; RULE TO WATCH MOVIE WITH FAMILY
-(defrule select_language
+(defrule select_industry
 	(and ?ins <- (object (is-a MOVIE))
 	(object (is-a PERSON)))
 	=> 
@@ -74,7 +74,7 @@
 	(object (is-a PERSON)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable to watch with your family..." crlf crlf)
+	(printout t "Let me select a movies suitable to watch..." crlf crlf)
    	(send [movie_name] put-genre
     (user-input-validation "Enter your preferred genre (animated/action/comedy/horror/drama):  "
     		animated action comedy horror drama)))
@@ -85,7 +85,7 @@
 	(object (is-a PERSON) (companion family)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable bollywood animated movie to watch with your family..." crlf crlf)
+	(printout t "Let me select suitable bollywood animated movies to watch with your family..." crlf crlf)
 	(send ?ins put-suggested_movie "Hanuman, Arjun, Mahabharat, Chota Bheem"))
 
 ; RULE TO WATCH BOLLYWOOD ACTION MOVIE WITH FAMILY
@@ -94,7 +94,7 @@
 	(object (is-a PERSON) (companion family)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable bollywood action movie to watch with your family..." crlf crlf)
+	(printout t "Let me select suitable bollywood action movies to watch with your family..." crlf crlf)
 	(send ?ins put-suggested_movie "Ek Tha Tiger, Parmanu, Special 26, Naam Shabana"))
 
 ; RULE TO WATCH BOLLYWOOD COMEDY MOVIE WITH FAMILY
@@ -103,7 +103,7 @@
 	(object (is-a PERSON) (companion family)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable bollywood comedy movie to watch with your family..." crlf crlf)
+	(printout t "Let me movie suitable bollywood comedy movies to watch with your family..." crlf crlf)
 	(send ?ins put-suggested_movie "OMG, Golmaal, Rocket Singh, Dostana"))
 
 ; RULE TO WATCH BOLLYWOOD HORROR MOVIE WITH FAMILY
@@ -112,7 +112,7 @@
 	(object (is-a PERSON) (companion family)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable bollywood horror movie to watch with your family..." crlf crlf)
+	(printout t "Let me movie suitable bollywood horror movies to watch with your family..." crlf crlf)
 	(send ?ins put-suggested_movie "Bhool Bhulaiyaa, Stree, Bhootnath, Go Goa Gone"))
 
 ; RULES TO WATCH DRAMA MOVIES WITH FAMILY
@@ -121,7 +121,7 @@
 	(object (is-a PERSON) (companion family)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable bollywood drama movie to watch with your family..." crlf crlf)
+	(printout t "Let me select suitable bollywood drama movies to watch with your family..." crlf crlf)
 	(send ?ins put-suggested_movie "Kal Ho Na Ho, Kabhi Khushi Kabhi Gham, Dil to Pagal Hai, Dil Chahta Hai"))
 
 ; RULE TO WATCH BOLLYWOOD ANIMATED MOVIES friends
@@ -130,7 +130,7 @@
 	(object (is-a PERSON) (companion friends)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable bollywood animated movie to watch friends..." crlf crlf)
+	(printout t "Let me select suitable bollywood animated movies to watch friends..." crlf crlf)
 	(send ?ins put-suggested_movie "Kochadaiyyan, Makkhi, Roadside Romeo, Tarzan"))
 
 ; RULE TO WATCH BOLLYWOOD ACTION MOVIES friends
@@ -139,7 +139,7 @@
 	(object (is-a PERSON) (companion friends)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable bollywood action movie to watch friends..." crlf crlf)
+	(printout t "Let me select suitable bollywood action movies to watch friends..." crlf crlf)
 	(send ?ins put-suggested_movie "Singham, Race, Sultan, Kick"))
 
 
@@ -149,7 +149,7 @@
 	(object (is-a PERSON) (companion friends)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable bollywood comedy movie to watch friends..." crlf crlf)
+	(printout t "Let me select suitable bollywood comedy movies to watch friends..." crlf crlf)
 	(send ?ins put-suggested_movie "Housefull"))
 
 ; RULE TO WATCH BOLLYWOOD HORROR MOVIES friends
@@ -158,7 +158,7 @@
 	(object (is-a PERSON) (companion friends)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable bollywood horror movie to watch friends..." crlf crlf)
+	(printout t "Let me select suitable bollywood horror movies to watch friends..." crlf crlf)
 	(send ?ins put-suggested_movie "13B, Pari, Bhoot, 1921"))
 
 
@@ -168,7 +168,7 @@
 	(object (is-a PERSON) (companion friends)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable bollywood drama movie to watch friends..." crlf crlf)
+	(printout t "Let me select suitable bollywood drama movies to watch friends..." crlf crlf)
 	(send ?ins put-suggested_movie "Dhadak, Andhadhun, Gold, Raazi"))
 
 
@@ -182,7 +182,7 @@
 	(object (is-a PERSON) (companion family)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable hollywood animated movie to watch with your family..." crlf crlf)
+	(printout t "Let me select suitable hollywood animated movies to watch with your family..." crlf crlf)
 	(send ?ins put-suggested_movie "Frozen, Finding Nemo, Up, Coco"))
 
 ; RULE TO WATCH hollywood ACTION MOVIE WITH FAMILY
@@ -191,7 +191,7 @@
 	(object (is-a PERSON) (companion family)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable hollywood action movie to watch with your family..." crlf crlf)
+	(printout t "Let me select suitable hollywood action movies to watch with your family..." crlf crlf)
 	(send ?ins put-suggested_movie "American Sniper, Italian Job, Mr and Mrs Smith, White House Down"))
 
 ; RULE TO WATCH hollywood COMEDY MOVIE WITH FAMILY
@@ -200,7 +200,7 @@
 	(object (is-a PERSON) (companion family)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable hollywood comedy movie to watch with your family..." crlf crlf)
+	(printout t "Let me select a suitable hollywood comedy movies to watch with your family..." crlf crlf)
 	(send ?ins put-suggested_movie "Wanderlust, Home Alone, We're the Millers, Ted"))
 
 ; RULE TO WATCH hollywood HORROR MOVIE WITH FAMILY
@@ -209,7 +209,7 @@
 	(object (is-a PERSON) (companion family)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable hollywood horror movie to watch with your family..." crlf crlf)
+	(printout t "Let me select suitable hollywood horror movies to watch with your family..." crlf crlf)
 	(send ?ins put-suggested_movie "Conjuring, Insidious, Paranormal Activity, Scream"))
 
 ; RULES TO WATCH hollywood DRAMA MOVIES WITH FAMILY
@@ -218,7 +218,7 @@
 	(object (is-a PERSON) (companion family)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable hollywood drama movie to watch with your family..." crlf crlf)
+	(printout t "Let me select suitable hollywood drama movies to watch with your family..." crlf crlf)
 	(send ?ins put-suggested_movie "Pursuit of Happyness, Arrival, Spotlight, Whiplash"))
 
 ; RULE TO WATCH hollywood ANIMATED MOVIES friends
@@ -227,7 +227,7 @@
 	(object (is-a PERSON) (companion friends)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable hollywood animated movie to watch friends..." crlf crlf)
+	(printout t "Let me select suitable hollywood animated movies to watch friends..." crlf crlf)
 	(send ?ins put-suggested_movie "Zootopia, Incredibles, Moana, Minions"))
 
 ; RULE TO WATCH hollywood ACTION MOVIES friends
@@ -236,7 +236,7 @@
 	(object (is-a PERSON) (companion friends)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable hollywood action movie to watch friends..." crlf crlf)
+	(printout t "Let me select suitable hollywood action movies to watch friends..." crlf crlf)
 	(send ?ins put-suggested_movie "Fast and Furious, Avengers, Mad Max, Dark Knight"))
 
 
@@ -246,7 +246,7 @@
 	(object (is-a PERSON) (companion friends)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable hollywood comedy movie to watch friends..." crlf crlf)
+	(printout t "Let me select suitable hollywood comedy movies to watch friends..." crlf crlf)
 	(send ?ins put-suggested_movie "21 Jump Street, Crazy Stupid Love, Deadpool, Hangover"))
 
 ; RULE TO WATCH hollywood HORROR MOVIES friends
@@ -255,7 +255,7 @@
 	(object (is-a PERSON) (companion friends)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable hollywood horror movie to watch friends..." crlf crlf)
+	(printout t "Let me select movies suitable hollywood horror movie to watch friends..." crlf crlf)
 	(send ?ins put-suggested_movie "Oculus, Shining, Ring, Exorcism"))
 
 
@@ -265,7 +265,7 @@
 	(object (is-a PERSON) (companion friends)))
 	=> 
 	(printout t crlf)
-	(printout t "Let me select a movie suitable hollywood drama movie to watch friends..." crlf crlf)
+	(printout t "Let me select movies suitable hollywood drama movie to watch friends..." crlf crlf)
 	(send ?ins put-suggested_movie "Greatest Showman, Room, Prisoners, Gravity"))
 
 
@@ -280,5 +280,5 @@
 	=>
 	(printout t crlf)
 	(printout t "-----------------------------------------------------------------------------" crlf)
-    (printout t "The recommended movie for you is: " ?mov crlf)
+    (printout t "The recommended movies for you are: " ?mov crlf)
     (printout t "-----------------------------------------------------------------------------" crlf))
