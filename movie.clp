@@ -11,8 +11,7 @@
 	(role concrete)
 	(slot genre)
 	(slot language)
-	(slot suggested_movie)
-	(slot type))
+	(slot suggested_movie))
 
 ;----------------------------------------------------------------------------
 ; DEFAULT INSTANCES
