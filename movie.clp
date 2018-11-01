@@ -57,7 +57,7 @@
 ;----------------------------------------------------------------------------
 
 ; RULE TO WATCH MOVIE WITH FAMILY
-(defrule select_industry
+(defrule select_industry(declare (salience 5))
 	(and ?ins <- (object (is-a MOVIE))
 	(object (is-a PERSON)))
 	=> 
@@ -68,7 +68,7 @@
     		hollywood bollywood)))
 
 ; RULE TO WATCH BOLLYWOOD MOVIE WITH FAMILY
-(defrule select_genre
+(defrule select_genre(declare (salience 3))
 	(and ?ins <- (object (is-a MOVIE))
 	(object (is-a PERSON)))
 	=> 
